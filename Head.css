@@ -1,13 +1,39 @@
-header {
+body {
+    background-color: white;
+    text-align:justify;
+    font-size: larger;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    color: black;
     
-    background-color: grey;
+   
+;}
+
+.header {
+    
+    background-color: brown;
+    text-align: center;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: left;
+    padding: 4;
+    nav-index: auto;
+    position: fixed; 
+    left:0;
+    top: 0; 
+    right: 0;    
 };
-.container{
-    background-color: aqua
-};
-p{
-    margin-top: 1.6em 
-};
-footer {
-   padding:  4 rem 0
-};
+.registro{
+  text-align: center;
+    font-family:'Times New Roman';
+    font-size: small;
+    padding-left: 5;
+margin-bottom: 4ch;
+color-scheme: rgb(199, 43, 69);}
+
+
+.footer {
+   padding:  4 rem 0;
+   text-align: center;
+   font-size: xx-large;
+   font-family: 'Segoe UI';
+}; 
