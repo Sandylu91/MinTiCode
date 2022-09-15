@@ -1,7 +1,3 @@
 //alert ("Bienvenidos")
 
-document.writeln ("Datos de la empresa");
-
-document.writeln ("Ubicacion")
-document.writeln ("telefono")
-document.writeln ("redes sociales");
+document.writeln ("Datos de la empresa" +"<br/> Ubicacion"+"<br/>Teléfono"+"<br/>Redes sociales");
