@@ -45,11 +45,7 @@ html {
     color: white;
 };
 
-.container {
-    
-    width: 85%;
-    margin: 0 0;
-};
+
 
 
 
@@ -74,7 +70,7 @@ color-scheme: rgb(199, 43, 69);
    font-family: 'Courier New', Courier, monospace;
    color: white;
    width: 100%;      
-  position: absolute;
+  position:absolute;
   bottom: 0;
   width: 100%;
     
