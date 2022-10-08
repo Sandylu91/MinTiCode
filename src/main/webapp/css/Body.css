@@ -1,0 +1,29 @@
+
+.centrar{
+    margin: auto;
+    display:block;
+}
+
+
+
+
+.centrar input{
+    margin:auto;
+    display:block;
+    width: 300px;
+    text-align: justify;
+    margin-bottom: 3rem;
+}
+.button {
+    border: brown;
+    background-color: brown;
+    color: white;
+    align-items: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 0.5em;
+    padding: 0.5em 0.5em;
+    border-radius: 80px 20px;
+   
+  }
+  
