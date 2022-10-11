@@ -6,9 +6,9 @@ $(document).ready(function () {
 
     fillUsuario().then(function () {
 
-         $("#user-saldo").html("Usuario "+user.email_usuario);
+        $("#user-saldo").html("$" + user.saldo.toFixed());
 
-        getProvedores(false, "ASC");
+        getAlquiladas(user.email_usuario);
     });
 
     $("#reservar-btn").attr("href", `home.html?email_usuario=${email_usuario}`);
