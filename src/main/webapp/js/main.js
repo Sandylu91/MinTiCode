@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     getUsuario().then(function () {
         
-        $("#mi-perfil-btn").attr("href","perfil.html?email_usuario=" + email_usuario);
+        $("#mi-perfil-btn").attr("href","profile.html?email_usuario=" + email_usuario);
         
         $("#user-saldo").html("Bienvenido usuario "+user.email_usuario);
          getProvedores(false, "ASC");
@@ -61,24 +61,20 @@ function getProvedores(ordenar, orden) {
             }
         }
     });
+
     function mostrarProveedores(usuarios) {
-
     let contenido = "";
-
-    $.each(usuarios, function (index, usuario) {
-
+   $.each(usuarios, function (index, usuario) {
         usuario = JSON.parse(usuario);
-       
-
-    contenido += '<tr><th scope="row">' + usuario.id_usuario + '</th>' +
+     
+   contenido += '<tr><th scope="row">' + usuario.id_usuario + '</th>' +
                     '<td>' + usuario.nombre_usuario+ '</td>' +
                     '<td>' + usuario.apellido_usuario + '</td>' +
                     '<td>' + usuario.email_usuario + '</td>' +
                     '<td>' + usuario.telefono_usuario + '</td>' +
                     '<td>' + usuario.direccion_usuario + '</td>' +
                     '<td>' + usuario.cod_rol + '</td>'+
-                    '<td><button class="button">Modificar</button></td>'+
-                    '<td><button class="button">Eliminar</button></td></tr>';
+                    '<td><a class="button" href="profile.html?email_usuario="'+email_usuario+'>Modificar/Eliminar</a></td>';
             
     });
     $("#usuarios-tbody").html(contenido);

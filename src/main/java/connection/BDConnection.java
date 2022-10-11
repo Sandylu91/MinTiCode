@@ -12,12 +12,13 @@ public class BDConnection {
     
     static String bd= "solicitudes";
     static String port ="3306";
-    static String login="root";
-    static String password ="admin";
+    static String login="rootmintic" ;
+    static String password ="admin1234";
+    
 
     public BDConnection() {
         try { Class.forName("com.mysql.jdbc.Driver");
-        String url = "jdbc:mysql://localhost:"+this.port+"/"+this.bd;
+        String url = "jdbc:mysql://db4free.net:"+this.port+"/"+this.bd;
         connection=DriverManager.getConnection(url,this.login,this.password);
             System.out.println("Conexion establecida");
             

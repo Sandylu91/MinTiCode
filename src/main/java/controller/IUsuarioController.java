@@ -11,5 +11,11 @@ public interface IUsuarioController {
    public String pedir(String email_usuario);
    
    public String listar(boolean ordenar, String orden);
+   public String modificar(String email_usuario, String nuevaContrasena,
+            String nuevoNombre, String nuevosApellidos,
+            int nuevoTelefono, String nuevaDireccion);
+   
+/*   
+   public String eliminar(String email_usuario);*/
 }
 

@@ -113,10 +113,7 @@ public String login (String email_usuario, String password_usuario){
         BDConnection con = new BDConnection();
         String sql = "Select * from usuarios";
 
-        if (ordenar == true) {
-            sql += " order by cod_rol " + orden;
-        }
-
+       
         List<String> usuarios = new ArrayList<String>();
 
         try {
@@ -150,4 +147,81 @@ Usuarios  usuario =new Usuarios (id_usuario,nombre_usuario ,apellido_usuario, em
         return gson.toJson(usuarios);
 
     }
+    
+    @Override
+    public String modificar(String email_usuario, String nuevaContrasena,
+            String nuevoNombre, String nuevosApellidos,
+            int nuevoTelefono, String nuevaDireccion) {
+
+        BDConnection con = new BDConnection();
+
+        String sql = "Update usuarios set password_usuario = '" + nuevaContrasena
+                + "', nombre_usuario = '" + nuevoNombre + "', "
+                + "apellido_usuario = '" + nuevosApellidos + "', telefono_usuario = '"
+                + nuevoTelefono + "', direccion_usuario '" + nuevaDireccion + "'";
+        sql += " where email_usuario = '" + email_usuario + "'";
+
+        try {
+
+            Statement st = con.getConnection().createStatement();
+            st.executeUpdate(sql);
+
+            return "true";
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            con.desconectar();
+        }
+
+        return "false";
+
+    }
+    /*@Override
+    public String modificar(String email_usuario, String nuevaContrasena_usuario,
+            String nuevoNombre_usuario, String nuevoApellido_usuario,
+            int nuevoTelefono_usuario,String nuevaDireccion_usuario) {
+
+       BDConnection con = new BDConnection();
+
+        String sql = "Update usuarios set password_usuario= '"+nuevaContrasena_usuario+"', nombre_usuario = '"+nuevoNombre_usuario+"', apellido_usuario = '"+nuevoApellido_usuario+"', telefono_usuario = '"+nuevoTelefono_usuario+"', direccion_usuario = '"+nuevaDireccion_usuario+"'";
+
+           try {
+
+            Statement st = con.getConnection().createStatement();
+            st.executeUpdate(sql);
+
+            return "true";
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            con.desconectar();
+        }
+
+        return "false";
+
+    }
+
+    @Override
+    public String eliminar(String email_usuario) {
+
+        BDConnection con = new BDConnection();
+
+                String sql = "Delete from usuarios where email_usuario = '" + email_usuario + "'";
+
+        try {
+            Statement st = con.getConnection().createStatement();
+            st.executeUpdate(sql);
+     
+
+            return "true";
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            con.desconectar();
+        }
+
+        return "false";
+    }*/
+
+
 }
