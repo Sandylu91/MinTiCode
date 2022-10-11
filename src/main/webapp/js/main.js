@@ -11,6 +11,7 @@ $(document).ready(function () {
         
         $("#mi-perfil-btn").attr("href","profile.html?email_usuario=" + email_usuario);
         
+              
         $("#user-saldo").html("Bienvenido usuario "+user.email_usuario);
          getProvedores(false, "ASC");
 
@@ -74,7 +75,7 @@ function getProvedores(ordenar, orden) {
                     '<td>' + usuario.telefono_usuario + '</td>' +
                     '<td>' + usuario.direccion_usuario + '</td>' +
                     '<td>' + usuario.cod_rol + '</td>'+
-                    '<td><a class="button" href="profile.html?email_usuario="'+email_usuario+'>Modificar/Eliminar</a></td>';
+                    '<td>Vaya a Ajustes -> Mi Perfil</td>';
             
     });
     $("#usuarios-tbody").html(contenido);

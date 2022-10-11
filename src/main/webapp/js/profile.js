@@ -6,10 +6,10 @@ $(document).ready(function () {
 
     fillUsuario().then(function () {
 
-        $("#user-saldo").html("Usuario "+user.email_usuario);
-         getProvedores(false, "ASC");
+         $("#user-saldo").html("Usuario "+user.email_usuario);
 
-           });
+        getProvedores(false, "ASC");
+    });
 
     $("#reservar-btn").attr("href", `home.html?email_usuario=${email_usuario}`);
 
@@ -48,7 +48,7 @@ async function fillUsuario() {
                 $("#input-apellido_usuario").val(parsedResult.apellido_usuario);
                 $("#input-telefono_usuario").val(parsedResult.telefono_usuario);
                 $("#input-direccion_usuario").val(parsedResult.direccion_usuario);
-                
+               
 
             } else {
                 console.log("Error recuperando los datos del usuario");
@@ -58,17 +58,15 @@ async function fillUsuario() {
 }
 
 
-
-
 function modificarUsuario() {
 
     let email_usuario = $("#input-email_usuario").val();
     let password_usuario = $("#input-password_usuario").val();
     let nombre_usuario = $("#input-nombre_usuario").val();
     let apellido_usuario = $("#input-apellido_usuario").val();
-    let email = $("#input-email").val();
-    let saldo = $("#input-saldo").val();
-    let premium = $("#input-premium").prop('checked');
+    let telefono_usuario = $("#input-telefono_usuario").val();
+    let direccion_usuario = $("#input-direccion_usuario").val();
+
     $.ajax({
         type: "GET",
         dataType: "html",
@@ -78,8 +76,7 @@ function modificarUsuario() {
             password_usuario: password_usuario,
             nombre_usuario: nombre_usuario,
             apellido_usuario: apellido_usuario,
-            telefono_usuario: telefono_usuario,
-            direccion_usuario: direccion_usuario,
+            direccion_usuario:direccion_usuario,
             
         }),
         success: function (result) {

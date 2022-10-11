@@ -15,7 +15,7 @@ public interface IUsuarioController {
             String nuevoNombre, String nuevosApellidos,
             int nuevoTelefono, String nuevaDireccion);
    
-/*   
-   public String eliminar(String email_usuario);*/
+  
+   public String eliminar(String email_usuario);
 }
 

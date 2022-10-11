@@ -9,5 +9,6 @@ beans\Solicitud.class
 controller\UsuarioController.class
 servlets\ServletUsuarioModificar.class
 beans\Roles.class
+servlets\ServletUsuarioEliminar.class
 test\OperacionesBD.class
 servlets\ServletUsuarioLogin.class
