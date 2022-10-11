@@ -1,0 +1,21 @@
+#facebook {
+    width: 50px;
+}
+
+#instagram {
+    width: 50px;
+}
+
+
+
+.footer {
+    background-color: brown;
+    text-align: center;
+    font-size: 20px;
+
+    color: white;
+    bottom: 0;
+    width: 100%;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}

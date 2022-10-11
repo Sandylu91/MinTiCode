@@ -1,0 +1,13 @@
+servlets\ServletProveedoresListar.class
+connection\BDConnection.class
+servlets\ServletUsuarioPedir.class
+controller\IUsuarioController.class
+servlets\PruebaServlet.class
+servlets\ServletUsuarioRegister.class
+beans\Usuarios.class
+beans\Solicitud.class
+controller\UsuarioController.class
+servlets\ServletUsuarioModificar.class
+beans\Roles.class
+test\OperacionesBD.class
+servlets\ServletUsuarioLogin.class
